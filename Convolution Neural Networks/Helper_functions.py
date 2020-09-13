@@ -70,3 +70,10 @@ def conv_single_step(a_slice_prev, W, b):
 
     return Z
     
+np.random.seed(1)
+a_slice_prev = np.random.randn(4, 4, 3)
+W = np.random.randn(4, 4, 3)
+b = np.random.randn(1, 1, 1)
+
+Z = conv_single_step(a_slice_prev, W, b)
+print("Z =", Z)
